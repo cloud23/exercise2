@@ -42,7 +42,7 @@ header {
 section {
   @include round(6px, #c9c9c9); /*border-radius(10px) <- from compass*/
   /*@include gradient(#f8f8f8, #e8e8e8);*/ 
-  @include background-image(linear-gradient(#f8f8f8, #e8e8e8)); }
+  @include background-image(linear-gradient(top, #f8f8f8, #e8e8e8)); 
   width:   400px;
   margin:  50px auto;
   padding: 15px 12px 0 12px;
@@ -81,10 +81,10 @@ fieldset {
 .buttons {
   @include round(4px, #dddddd);
   background-color: #e6e6e6;
-
-  -webkit-box-shadow: 0 0   5px rgba(254, 254, 254, .6);
+  @include single-box-shadow(#fefefe, 0, 0, 5px);
+/*  -webkit-box-shadow: 0 0   5px rgba(254, 254, 254, .6);
   -moz-box-shadow: 0 0   5px rgba(254, 254, 254, .6);
-  box-shadow: 0 0   5px rgba(254, 254, 254, .6);
+  box-shadow: 0 0   5px rgba(254, 254, 254, .6);*/
 
   width: 207px;
   float: right;
