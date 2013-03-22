@@ -28,17 +28,6 @@ header {
   border-radius:         $rad;
 }
 
-@mixin gradient($color1, $color2) {
-  background: $color1; /* Old browsers */
-  background: -moz-linear-gradient(top, $color1 0%, $color2 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color1), color-stop(100%,$color2)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, $color1 0%,$color2 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, $color1 0%,$color2 100%); /* Opera11.10+ */
-  background: -ms-linear-gradient(top, $color1 0%,$color2 100%); /* IE10+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
-  background: linear-gradient(top, $color1 0%,$color2 100%); /* W3C */
-}
-
 section {
   @include round(6px, #c9c9c9); /*border-radius(10px) <- from compass*/
   /*@include gradient(#f8f8f8, #e8e8e8);*/ 
@@ -81,43 +70,32 @@ fieldset {
 .buttons {
   @include round(4px, #dddddd);
   background-color: #e6e6e6;
-  @include single-box-shadow(#fefefe, 0, 0, 5px);
-/*  -webkit-box-shadow: 0 0   5px rgba(254, 254, 254, .6);
-  -moz-box-shadow: 0 0   5px rgba(254, 254, 254, .6);
-  box-shadow: 0 0   5px rgba(254, 254, 254, .6);*/
+  @include single-box-shadow(#dddddd, 0, 0, 5px);
 
   width: 207px;
   float: right;
-  padding: 5px 0;
+  padding: 7px 0;
 }
 
 button { cursor: pointer; }
 button[type="submit"] {
   @include round(4px, #3f8098);
-  @include gradient(#59b3d5, #3e7e96);
-  font-size: 1.5em;
-  height: 35px;
-  width: 115px;
+  @include background-image(linear-gradient(top, #59b3d5, #3e7e96)); 
+/*  @include gradient(#59b3d5, #59b3d5);*/
+  font-size: 1.3em;
+  height: 38px;
+  width: 110px;
   color: #fff;
 
-  -webkit-box-shadow:
-    0 1px 2px rgba(254, 254, 254, .6) inset,
-    0 0   5px rgba(63,  128, 152, .6);
-  -moz-box-shadow:
-    0 1px 2px rgba(254, 254, 254, .6) inset,
-    0 0   5px rgba(63,  128, 152, .6);
-  box-shadow:
-    0 1px 2px rgba(254, 254, 254, .6) inset,
-    0 0   5px rgba(63,  128, 152, .6);
+  @include box-shadow(rgba(63, 128, 152, 0.6) 0 0 5px, rgba(254, 254, 254, 0.6) 0 1px 2px inset);
 }
 
 button[type="submit"]:hover, button[type="submit"]:focus {
-  @include gradient(#3e7e96, #59b3d5);
+  @include background-image(linear-gradient(top, #3e7e96, #59b3d5));
+/*  @include gradient(#3e7e96, #59b3d5);*/
   color: #ccc;
 
-  -webkit-box-shadow: 0 -1px 2px rgba(254,254,254,.6) inset;
-  -moz-box-shadow:    0 -1px 2px rgba(254,254,254,.6) inset;
-  box-shadow:         0 -1px 2px rgba(254,254,254,.6) inset;
+  @include single-box-shadow(rgba(254,254,254,.6), 0, -1px, 2px, 0, inset);
 }
 
 button[type="reset"] {
@@ -125,7 +103,7 @@ button[type="reset"] {
   background: none;
   width: 80px;
   height: 35px;
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: #898989;
 }
 
@@ -165,3 +143,8 @@ h6 {
   font-family: Arial, Sans-serif;
 }
 button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+/*validations*/
+.validation {
+  
+}
