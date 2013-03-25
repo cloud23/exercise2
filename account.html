@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Accounts</title>
+  <script src="js/modernizr.custom.43590.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<section>
+		<header>
+			<hgroup>
+				<h1>Welcome!</h1>
+			</hgroup>
+		</header>
+		<span class="emailDisplay"></span>
+	</section>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"></script>
+  <script type="text/javascript">
+  	$(function () {
+			$(".emailDisplay").text(localStorage.getItem("email"));
+  	})
+  </script>
+</body>
+</html>

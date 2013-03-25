@@ -149,6 +149,7 @@ button, input, select, textarea { font-family: sans-serif; color: #222; }
 /*validations*/
 .validation {
   @include background-image(linear-gradient(top, #b2d43a, #92ae31));
+  @include round(3px, #95b132);
 
   margin:  -13px 0 0;
   padding: 0 20px 0 8px;
@@ -156,7 +157,7 @@ button, input, select, textarea { font-family: sans-serif; color: #222; }
 
   position: absolute;
   top: 50%;
-  left: 100%;
+  left: 102%;
 
   color: #fff;
   font: bold 12px/26px Helvetica, Arial, Sans-Serif;
@@ -174,14 +175,14 @@ button, input, select, textarea { font-family: sans-serif; color: #222; }
   height: 13px;
 
   position: absolute;
-  top: 0px;
+  top: 6px;
   left: -10px; 
   background: url('../images/bubble-g-l-s.png') no-repeat; 
 }
 
 .validation.error {
-   border: 1px solid #7a0026;
    @include background-image(linear-gradient(top, #9e0039, #7a0026)); 
+   @include round(3px, #7a0026);
 }
 
 .validation.error:before{ background: url('../images/bubble-r-l-s.png') no-repeat; }
