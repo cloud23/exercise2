@@ -60,9 +60,10 @@ fieldset {
   background-color: #e6e6e6;
   padding: 5px;
   margin: 10px 0;
+  position: relative;
 }
 
-/* line 52, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 .field input {
   border: 1px solid #c9c9c9;
   -webkit-border-radius: 4px;
@@ -75,18 +76,18 @@ fieldset {
   padding: 18px 15px;
 }
 
-/* line 61, ../sass/style.scss */
+/* line 63, ../sass/style.scss */
 .actions {
   padding: 15px 0;
 }
 
-/* line 65, ../sass/style.scss */
+/* line 67, ../sass/style.scss */
 .actions a {
   display: inline-block;
   margin-top: 15px;
 }
 
-/* line 70, ../sass/style.scss */
+/* line 72, ../sass/style.scss */
 .buttons {
   border: 1px solid #dddddd;
   -webkit-border-radius: 4px;
@@ -101,12 +102,12 @@ fieldset {
   padding: 7px 0;
 }
 
-/* line 80, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 button {
   cursor: pointer;
 }
 
-/* line 81, ../sass/style.scss */
+/* line 83, ../sass/style.scss */
 button[type="submit"] {
   border: 1px solid #3f8098;
   -webkit-border-radius: 4px;
@@ -127,7 +128,7 @@ button[type="submit"] {
   box-shadow: rgba(63, 128, 152, 0.6) 0 0 5px, rgba(254, 254, 254, 0.6) 0 1px 2px inset;
 }
 
-/* line 93, ../sass/style.scss */
+/* line 95, ../sass/style.scss */
 button[type="submit"]:hover, button[type="submit"]:focus {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3e7e96), color-stop(100%, #59b3d5));
   background-image: -webkit-linear-gradient(top, #3e7e96, #59b3d5);
@@ -141,7 +142,7 @@ button[type="submit"]:hover, button[type="submit"]:focus {
   box-shadow: inset 0 -1px 2px 0 rgba(254, 254, 254, 0.6);
 }
 
-/* line 101, ../sass/style.scss */
+/* line 103, ../sass/style.scss */
 button[type="reset"] {
   border: 0;
   background: none;
@@ -151,24 +152,24 @@ button[type="reset"] {
   color: #898989;
 }
 
-/* line 110, ../sass/style.scss */
+/* line 112, ../sass/style.scss */
 button[type="reset"]:hover, button[type="reset"]:focus {
   color: #696969;
 }
 
-/* line 114, ../sass/style.scss */
+/* line 116, ../sass/style.scss */
 fieldset a {
   font-size: .9em;
   color: #5cb9dc;
 }
 
-/* line 119, ../sass/style.scss */
+/* line 121, ../sass/style.scss */
 a:hover, a:focus {
   color: #408199;
 }
 
 /*Typography*/
-/* line 124, ../sass/style.scss */
+/* line 126, ../sass/style.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "League Gothic", Arial, Sans-serif;
   font-weight: normal;
@@ -176,33 +177,33 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
-/* line 130, ../sass/style.scss */
+/* line 132, ../sass/style.scss */
 h1 {
   font-size: 3em;
   color: #4eb2e0;
 }
 
-/* line 134, ../sass/style.scss */
+/* line 136, ../sass/style.scss */
 h2 {
   font-size: 2.5em;
 }
 
-/* line 135, ../sass/style.scss */
+/* line 137, ../sass/style.scss */
 h3 {
   font-size: 2em;
 }
 
-/* line 136, ../sass/style.scss */
+/* line 138, ../sass/style.scss */
 h4 {
   font-size: 1.5em;
 }
 
-/* line 137, ../sass/style.scss */
+/* line 139, ../sass/style.scss */
 h5 {
   font-size: 1em;
 }
 
-/* line 138, ../sass/style.scss */
+/* line 140, ../sass/style.scss */
 h6 {
   font-size: 1em;
   margin: 0;
@@ -211,10 +212,74 @@ h6 {
   font-family: Arial, Sans-serif;
 }
 
-/* line 145, ../sass/style.scss */
+/* line 147, ../sass/style.scss */
 button, input, select, textarea {
   font-family: sans-serif;
   color: #222;
 }
 
 /*validations*/
+/* line 150, ../sass/style.scss */
+.validation {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #b2d43a), color-stop(100%, #92ae31));
+  background-image: -webkit-linear-gradient(top, #b2d43a, #92ae31);
+  background-image: -moz-linear-gradient(top, #b2d43a, #92ae31);
+  background-image: -o-linear-gradient(top, #b2d43a, #92ae31);
+  background-image: linear-gradient(top, #b2d43a, #92ae31);
+  margin: -13px 0 0;
+  padding: 0 20px 0 8px;
+  height: 26px;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  color: #fff;
+  font: bold 12px/26px Helvetica, Arial, Sans-Serif;
+  white-space: nowrap;
+}
+/* line 165, ../sass/style.scss */
+.validation p {
+  margin: 0;
+  padding: 0;
+}
+/* line 167, ../sass/style.scss */
+.validation span {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 169, ../sass/style.scss */
+.validation:before {
+  content: '';
+  z-index: 1;
+  width: 10px;
+  height: 13px;
+  position: absolute;
+  top: 0px;
+  left: -10px;
+  background: url("../images/bubble-g-l-s.png") no-repeat;
+}
+
+/* line 182, ../sass/style.scss */
+.validation.error {
+  border: 1px solid #7a0026;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #9e0039), color-stop(100%, #7a0026));
+  background-image: -webkit-linear-gradient(top, #9e0039, #7a0026);
+  background-image: -moz-linear-gradient(top, #9e0039, #7a0026);
+  background-image: -o-linear-gradient(top, #9e0039, #7a0026);
+  background-image: linear-gradient(top, #9e0039, #7a0026);
+}
+
+/* line 187, ../sass/style.scss */
+.validation.error:before {
+  background: url("../images/bubble-r-l-s.png") no-repeat;
+}
+
+/* line 190, ../sass/style.scss */
+.loading {
+  background: rgba(200, 200, 200, 0.8) url("../images/loading.gif") no-repeat 50% 50%;
+  -webkit-box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  position: absolute;
+  display: block;
+}

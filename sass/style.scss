@@ -48,7 +48,9 @@ fieldset {
   background-color: #e6e6e6;
   padding: 5px;
   margin: 10px 0;
+  position: relative;
 }
+
 .field input {
   @include round(4px, #c9c9c9);
   width: 100%;
@@ -146,5 +148,48 @@ button, input, select, textarea { font-family: sans-serif; color: #222; }
 
 /*validations*/
 .validation {
-  
+  @include background-image(linear-gradient(top, #b2d43a, #92ae31));
+
+  margin:  -13px 0 0;
+  padding: 0 20px 0 8px;
+  height:  26px;
+
+  position: absolute;
+  top: 50%;
+  left: 100%;
+
+  color: #fff;
+  font: bold 12px/26px Helvetica, Arial, Sans-Serif;
+  white-space: nowrap;
+
+  p {margin: 0; padding: 0};
+
+  span {margin: 0; padding: 0;};
+}
+.validation:before {
+  content: '';
+  z-index: 1;
+
+  width: 10px;
+  height: 13px;
+
+  position: absolute;
+  top: 0px;
+  left: -10px; 
+  background: url('../images/bubble-g-l-s.png') no-repeat; 
+}
+
+.validation.error {
+   border: 1px solid #7a0026;
+   @include background-image(linear-gradient(top, #9e0039, #7a0026)); 
+}
+
+.validation.error:before{ background: url('../images/bubble-r-l-s.png') no-repeat; }
+
+
+.loading {
+  background: rgba(200,200,200,.8) url('../images/loading.gif') no-repeat 50% 50%;
+  @include single-box-shadow(rgba(0,0,0, .1), 0, 0, 5px, 0, inset);
+  position: absolute;
+  display: block;
 }
